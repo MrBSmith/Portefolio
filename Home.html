@@ -17,7 +17,7 @@
          <navbar :categories="categories_array"></navbar>
 
          <!-- Generate the card categories -->
-         <card v-for="cat in categories_array" :title="cat.name" :description="cat.description" :img="cat.img"></card>
+         <card v-for="cat in categories_array" :categorie="cat"></card>
       </div>
 
       <script src="js/app.js"> </script>
