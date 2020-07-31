@@ -12,15 +12,11 @@
    </head>
 
    <body>
-      <!-- Generate the navbar -->
-      <?php
-         require("navbar.php");
-         generate_navbar();
-      ?>
-
-
-      <!-- Generate the card categories -->
       <div id="app" class="ui main container">
+         <!-- Generate the navbar -->
+         <navbar :categories="categories_array"></navbar>
+
+         <!-- Generate the card categories -->
          <card v-for="cat in categories_array" :title="cat.name" :description="cat.description" :img="cat.img"></card>
       </div>
 
