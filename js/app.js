@@ -1,15 +1,18 @@
 
 class Categorie {
-   constructor(name, link, description){
+   constructor(name, link, description, thumbnail){
       this.name = name;
       this.link = link;
       this.description = description;
+      this.thumbnail = thumbnail;
    }
 }
 
-let GameDevCat = new Categorie("Game Dev", "GameDev.html", "The games I have made so far");
-let PixelArtCat = new Categorie("Pixel Art", "PixelArt.html", "Some of my best pieces of PixelArt");
-let MusicCat = new Categorie("Music", "Music.html", "The musics that I am proud of");
+let GameDevCat = new Categorie("Game Dev", "GameDev.html", "The games I have made so far", "PixelArt/TwitchBannerCropped.png");
+let PixelArtCat = new Categorie("Pixel Art", "PixelArt.html", "Some of my best pieces of PixelArt", "PixelArt/Hart.png");
+let MusicCat = new Categorie("Music", "Music.html", "The musics that I am proud of", "PixelArt/DTS.png");
+
+let categories_array = [GameDevCat, PixelArtCat, MusicCat];
 
 function get_page_title(){
    return document.getElementsByTagName("title")[0].innerHTML;
@@ -40,7 +43,7 @@ let navbar = {
    },
    components: { navbar_cat: navbar_cat },
    template :
-   `<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+   `<nav class="navbar navbar-expand-lg navbar-dark bg-success">
        <a class="navbar-brand" href="Home.html">Baba des Bois</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -61,21 +64,42 @@ let card = {
       categorie : Categorie
    },
    template:
-   `<div class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
+   `<div class="card bg-success" style="width: 30rem;">
+      <a :href="categorie.link">
+         <img :src="categorie.thumbnail" class="card-img-top" alt="...">
+      </a>
       <div class="card-body">
-         <h5 class="card-title"> {{categorie.title}} </h5>
+         <h5 class="card-title"> {{categorie.name}} </h5>
          <p class="card-text"> {{categorie.description}} </p>
-         <a href="categorie.link" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>`
 }
 
 
+let custom_footer = {
+   template:
+    `<div class="container">
+         <span class="text-muted">Place sticky footer content here.</span>
+     </div>`
+}
+
 let vm = new Vue({
    el: "#app",
-   components : {navbar: navbar, card: card},
+   components : {card: card},
    data:{
-      categories_array: [GameDevCat, PixelArtCat, MusicCat]
+      categories_array: categories_array
    }
+});
+
+let header_vm = new Vue({
+   el: "#header",
+   components: {navbar: navbar},
+   data: {
+      categories_array: categories_array
+   }
+});
+
+let footer_vm = new Vue({
+   el: "#footer",
+   components: {customfooter: custom_footer}
 });
