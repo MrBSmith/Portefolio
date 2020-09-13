@@ -1,12 +1,12 @@
 <template>
    <li v-if="Globals.Page == categorie.name" class="nav-item active">
-       <button class="nav-link disabled-link" :onclick="Globals.set_page(categorie.name)">{{ categorie.name }}
+       <div class="nav-link disabled-link" :onclick="Globals.set_page(categorie.name)">{{ categorie.name }}
           <span class="sr-only">(current)</span>
-       </button>
+       </div>
     </li>
 
     <li v-else class="nav-item">
-        <button class="nav-link" v-on:click="Globals.set_page(categorie.name)">{{ categorie.name }}</button>
+        <div class="nav-link" v-on:click="Globals.set_page(categorie.name)">{{ categorie.name }}</div>
      </li>
 </template>
 

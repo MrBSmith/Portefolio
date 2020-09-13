@@ -1,9 +1,9 @@
 <template>
    <main class="text-light">
       <navbar></navbar>
-      <indexPage v-if="Globals.Page == 'index'"></indexPage>
-      <pixelArtPage v-if="Globals.Page == 'Pixel Art'"></pixelArtPage>
-      <gameDevPage v-if="Globals.Page == 'Game Dev'"></gameDevPage>
+      <indexPage v-if="Globals.get_page() == 'index'"></indexPage>
+      <pixelArtPage v-if="Globals.get_page() == 'Pixel Art'"></pixelArtPage>
+      <gameDevPage v-if="Globals.get_page() == 'Game Dev'"></gameDevPage>
       <customFooter></customFooter>
    </main>
 </template>
@@ -23,6 +23,9 @@
        return {
          Globals
        }
+    },
+     created: function(){
+        Globals.set_page('index')
      }
    }
 </script>
