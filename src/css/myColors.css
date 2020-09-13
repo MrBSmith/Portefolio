@@ -1,0 +1,35 @@
+html {
+   --main-transition: all 0.2s ease-out;
+   --focus-color: #ffa070;
+   --main-color: #1a869c;
+   --text-main-color: white;
+   --dark-color: #263847;
+}
+
+.bg-main-color {
+   background-color: var(--main-color);
+}
+
+.bg-dark-color {
+   background-color: var(--dark-color);
+}
+
+.bg-focus-color {
+   background-color: var(--focus-color);
+}
+
+.text-main-color {
+   color: var(--text-main-color);
+}
+
+.text-dark-color {
+   color: var(--dark-color);
+}
+
+.text-focus-color {
+   color: var(--focus-color);
+}
+
+.text-main-font{
+   font-family: 'Roboto Slab', serif;
+}
