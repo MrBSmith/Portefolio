@@ -1,6 +1,8 @@
 <template lang="html">
-   <div class="d-flex justify-content-center" style="padding: 1rem;">
-      <card v-for="cat in categories" :key="cat.name" :categorie="cat"></card>
+   <div class="page" style="padding: 1rem;">
+      <div class="d-flex justify-content-center">
+         <card v-for="cat in categories" :key="cat.name" :categorie="cat"></card>
+      </div>
    </div>
 </template>
 

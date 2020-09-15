@@ -1,5 +1,5 @@
 <template lang="html">
-   <div>
+   <div class="page">
       <h5 class="title">Pixel Art Galery</h5>
 
       <div class="d-flex flex-column" style = "padding: 1.5rem;">

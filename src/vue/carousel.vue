@@ -1,8 +1,7 @@
 <template lang="html">
-   <div class="d-flex justify-content-center">
       <div id="gameCarousel" class="carousel slide" data-ride="carousel">
          <div class="carousel-inner">
-           <carouselItem v-for="(game, id) in gameData" :game="game" :isActive="slide == id" :key="game.title"></carouselItem>
+           <carouselItem v-for="(game, id) in gameData" :game="game" :class="{active: id == 0}" :key="game.title"></carouselItem>
          </div>
          <a class="carousel-control-prev" href="#gameCarousel" role="button" data-slide="prev">
            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -13,7 +12,6 @@
            <span class="sr-only">Next</span>
          </a>
       </div>
-   </div>
 </template>
 
 <script>
@@ -43,11 +41,17 @@ export default {
 
 <style lang="css" scoped>
    .carousel{
-      padding: 2%;
-      max-width: 80%;
+      padding: 0.5%;
+      max-width: 65%;
       max-height: 20%;
+      margin: 2rem;
+      border-radius: 1rem;
+      background-color: var(--main-color);
+      align-self: center;
+      object-fit: contain;
       @sliding-start="onSlideStart";
       @sliding-end="onSlideEnd";
       :sliding = null;
+
    }
 </style>

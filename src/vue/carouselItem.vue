@@ -1,6 +1,6 @@
 <template lang="html">
    <div :class="[isActive ? 'carousel-item-active' : 'carousel-item']">
-     <img :src="game.thumbnail" class="d-block w-100" alt="">
+     <img :src="game.thumbnail" class="carousel-image d-block w-100" alt="">
       <div class="carousel-caption d-none d-md-block">
          <h5 class="carousel-title">{{ game.title }}</h5>
          <p class="carousel-description">{{ game.short_desc }}</p>

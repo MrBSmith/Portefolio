@@ -10,11 +10,13 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "bootstrap": "^4.5.0",
+    "bootstrap": "^4.5.2",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "vue": "^2.5.11",
-    "vue-popperjs": "^2.3.0"
+    "vue-popperjs": "^2.3.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   },
   "browserslist": [
     "> 1%",
@@ -31,9 +33,8 @@
     "file-loader": "^1.1.4",
     "node-sass": "^4.14.1",
     "sass-loader": "^6.0.6",
-    "vue-loader": "^13.0.5",
+    "vue-loader": "^14.2.2",
     "vue-template-compiler": "^2.4.4",
-    "webpack": "^3.12.0",
-    "webpack-dev-server": "^3.1.11"
+    "webpack-dev-server": "^3.7.1"
   }
 }
