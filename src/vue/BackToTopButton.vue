@@ -1,53 +1,128 @@
-<template lang="html">
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<template>
+  <transition name="back-to-top-fade">
+    <a
+      href="#navbar"
+      class="vue-back-to-top"
+      :style="`bottom:${this.bottom};right:${this.right};`"
+      v-show="visible">
+      <slot>
+        <div class="default">
+          <span>
+            {{ text }}
+          </span>
+        </div>
+      </slot>
+   </a>
+  </transition>
 </template>
 
 <script>
-   export default {
-      name: "toTopButton",
-      created: function() {
-        window.addEventListener('onscroll', this.scrollFunction);
-      },
-      destroyed: function() {
-        window.removeEventListener('onscroll', this.scrollFunction);
-      },
-      methods: {
-         scrollFunction : function() {
-           mybutton = document.getElementById("myBtn");
-           if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-             mybutton.style.display = "block";
-           } else {
-             mybutton.style.display = "none";
-           }
-        },
-
-         // When the user clicks on the button, scroll to the top of the document
-         scrollFunction: function() {
-           document.body.scrollTop = 0; // For Safari
-           document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-         }
+export default {
+  name: 'BackToTop',
+  props: {
+    text: {
+      type: String,
+      default: 'Haut de page',
+    },
+    visibleoffset: {
+      type: [String, Number],
+      default: 600,
+    },
+    visibleoffsetbottom: {
+      type: [String, Number],
+      default: 0,
+    },
+    right: {
+      type: String,
+      default: '30px',
+    },
+    bottom: {
+      type: String,
+      default: '70px',
+    },
+    scrollFn: {
+      type: Function,
+      default: function (eventObject) {},
+    }
+  },
+  data () {
+    return {
+      visible: false
+    }
+  },
+  mounted () {
+    window.smoothscroll = () => {
+      let currentScroll = document.documentElement.scrollTop || document.body.scrollTop
+      if (currentScroll > 0) {
+        window.requestAnimationFrame(window.smoothscroll)
+        window.scrollTo(0, Math.floor(currentScroll - (currentScroll / 5)))
       }
-   }
+    }
+    window.addEventListener('scroll', this.catchScroll)
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.catchScroll)
+  },
+  methods: {
+    /**
+     * Catch window scroll event
+     * @return {void}
+     */
+    catchScroll () {
+      const pastTopOffset = window.pageYOffset > parseInt(this.visibleoffset)
+      const pastBottomOffset = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - parseInt(this.visibleoffsetbottom)
+      this.visible = parseInt(this.visibleoffsetbottom) > 0 ? pastTopOffset && !pastBottomOffset : pastTopOffset
+      this.scrollFn(this)
+    },
+    /**
+     * The function who make the magics
+     * @return {void}
+     */
+    backToTop () {
+      window.smoothscroll()
+      this.$emit('scrolled')
+    }
+  },
+}
 </script>
 
-<style lang="css" scoped>
-   #myBtn {
-   display: none; /* Hidden by default */
-   position: fixed; /* Fixed/sticky position */
-   bottom: 20px; /* Place the button at the bottom of the page */
-   right: 30px; /* Place the button 30px from the right */
-   z-index: 99; /* Make sure it does not overlap */
-   border: none; /* Remove borders */
-   outline: none; /* Remove outline */
-   background-color: red; /* Set a background color */
-   color: white; /* Text color */
-   cursor: pointer; /* Add a mouse pointer on hover */
-   padding: 15px; /* Some padding */
-   border-radius: 10px; /* Rounded corners */
-   font-size: 18px; /* Increase font size */
+<style>
+   a{
+      text-decoration: none !important;
+   }
+   .back-to-top-fade-enter-active,
+   .back-to-top-fade-leave-active {
+   transition: opacity .7s;
+   }
+   .back-to-top-fade-enter,
+   .back-to-top-fade-leave-to {
+   opacity: 0;
    }
 
-   #myBtn:hover {
-   background-color: #555; /* Add a dark-grey background on hover */
+   .vue-back-to-top {
+   cursor:pointer;
+   position: fixed;
+   z-index: 1000;
+   text-decoration: none;
+   }
+
+   .vue-back-to-top .default {
+   background-color: #e6a119;
+   border-radius: 3px;
+   color: var(--dark-color);
+   height: 30px;
+   line-height: 30px;
+   text-align: center;
+   width: 160px;
+   }
+
+   .vue-back-to-top .default span{
+   color: var(--text-main-color);
+   }
+
+   .vue-back-to-top--is-footer {
+   bottom: 50% !important;
+   position: absolute;
+   transform: translateY(50%);
    }
 </style>

@@ -1,7 +1,6 @@
 <template lang="html">
    <div class="page">
       <h5 class="title">Pixel Art Galery</h5>
-      <toTopButton></toTopButton>
 
       <div class="d-flex flex-column" style = "padding: 1.5rem;">
          <div class="d-flex align-self-center">
@@ -50,12 +49,11 @@
 
 <script>
    import thumbnail from "./image.vue"
-   import toTopButton from "./BackToTopButton.vue"
+
    export default {
       name: "pixelArtPage",
       components: {
-         thumbnail,
-         toTopButton
+         thumbnail
       }
    }
 </script>

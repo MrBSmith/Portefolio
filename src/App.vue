@@ -1,6 +1,7 @@
 <template>
    <main class="text-light">
       <navbar></navbar>
+      <BackToTop text="Haut de page"></BackToTop>
       <indexPage v-if="Globals.get_page() == 'index'"></indexPage>
       <pixelArtPage v-if="Globals.get_page() == 'Pixel Art'"></pixelArtPage>
       <gameDevPage v-if="Globals.get_page() == 'Game Dev'"></gameDevPage>
@@ -15,10 +16,11 @@
    import pixelArtPage from './vue/pixelArtPage.vue'
    import gameDevPage from './vue/gameDevPage.vue'
    import Globals from './js/Globals.js'
+   import BackToTop from './vue/BackToTopButton.vue'
 
    export default {
      name: 'app',
-     components: { navbar, pixelArtPage, indexPage, customFooter, gameDevPage },
+     components: { navbar, pixelArtPage, indexPage, customFooter, gameDevPage, BackToTop },
      data: function(){
        return {
          Globals
