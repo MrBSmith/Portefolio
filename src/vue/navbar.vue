@@ -31,6 +31,7 @@
       border: none;
       background-color: inherit;
       font-weight: bold;
+      font-size: 1.6rem;
       color: var(--text-main-color);
       transition: var(--main-transition);
       opacity: 100%;

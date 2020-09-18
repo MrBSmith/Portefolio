@@ -3,3 +3,9 @@
    flex-direction: column;
    justify-content: center;
 }
+
+html{
+    scroll-behavior: smooth;
+    transition-duration: 800ms;
+    transition-timing-function: ease;
+}

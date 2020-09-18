@@ -9,7 +9,8 @@ class Game {
    }
 }
 
-let Trpg = new Game("Tactical RPG", "", "A tactical RPG in isometric view", "", "./src/assets/PixelArt/Screenshots/TRPG.png");
-let XionLeak = new Game("XionLeak", "", "A two players, platformer/runner under steroïds", "", "./src/assets/PixelArt/Screenshots/XionLeak.png");
+let XionLeak = new Game("XionLeak", "", "A two players, platformer/runner under steroïds", "", "./src/assets/PixelArt/Screenshots/XionLeak.png", "https://www.youtube.com/embed/aZKuo-pjtrs");
+let Trpg = new Game("Tactical RPG", "", "A tactical RPG in isometric view", "", "./src/assets/PixelArt/Screenshots/TRPG.png", "");
 
-export default [Trpg, XionLeak];
+
+export default [XionLeak, Trpg];

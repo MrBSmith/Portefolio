@@ -45,6 +45,7 @@ export default {
       max-width: 65%;
       max-height: 20%;
       margin: 2rem;
+      margin-top: 3rem;
       border-radius: 1rem;
       background-color: var(--main-color);
       align-self: center;
