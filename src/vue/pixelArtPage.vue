@@ -62,7 +62,6 @@
 
       <!-- Screenshots -->
       <!--
-
       <h5 class="title">Games Screenshots</h5>
       <div class="d-flex justify-content-center">
          <div class="flex-column" style="padding: 1.5rem;">
@@ -72,7 +71,7 @@
             <thumbnail src="../src/assets/PixelArt/Screenshots/RPGFantasy.png" alt="..."></thumbnail>
          </div>
       </div>
-   -->
+      -->
    </div>
 </template>
 

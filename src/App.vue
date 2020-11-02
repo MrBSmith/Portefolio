@@ -2,10 +2,10 @@
    <main class="text-light">
       <navbar></navbar>
       <BackToTop text="Back to Top"></BackToTop>
-      <indexPage v-if="Globals.get_page() == 'index'"></indexPage>
-      <pixelArtPage v-if="Globals.get_page() == 'Pixel Art'"></pixelArtPage>
-      <gameDevPage v-if="Globals.get_page() == 'Game Dev'"></gameDevPage>
-      <musicPage v-if="Globals.get_page() == 'Music'"></musicPage>
+      <indexPage v-if="GlobalsFunc.get_current_page() == 'HugoBarette'"></indexPage>
+      <pixelArtPage v-if="GlobalsFunc.get_current_page() == 'PixelArt'"></pixelArtPage>
+      <gameDevPage v-if="GlobalsFunc.get_current_page() == 'GameDev'"></gameDevPage>
+      <musicPage v-if="GlobalsFunc.get_current_page() == 'Music'"></musicPage>
       <customFooter></customFooter>
    </main>
 </template>
@@ -16,7 +16,7 @@
    import indexPage from './vue/indexPage.vue'
    import pixelArtPage from './vue/pixelArtPage.vue'
    import gameDevPage from './vue/gameDevPage.vue'
-   import Globals from './js/Globals.js'
+   import GlobalsFunc from './js/GlobalsFunc.js'
    import BackToTop from './vue/BackToTopButton.vue'
    import musicPage from './vue/musicPage.vue'
 
@@ -25,11 +25,11 @@
      components: { navbar, pixelArtPage, indexPage, customFooter, gameDevPage, BackToTop, musicPage },
      data: function(){
        return {
-         Globals
+         GlobalsFunc
        }
     },
      created: function(){
-        Globals.set_page('index')
+        GlobalsFunc.set_page('index')
      }
    }
 </script>

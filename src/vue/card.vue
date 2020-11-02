@@ -1,6 +1,6 @@
 <template>
    <div class="card bg-main-color">
-      <a class="card-link" v-on:click="Globals.set_page(categorie.name)">
+      <a class="card-link" :href="categorie.name.replaceAll(' ', '') + '.html'">
          <img :src="categorie.thumbnail" class="card-img-top" alt="...">
          <div class="card-body">
             <h5 class="card-title"> {{categorie.name}} </h5>
@@ -11,14 +11,14 @@
 </template>
 
 <script>
-import Globals from '../js/Globals.js'
+import GlobalsFunc from '../js/GlobalsFunc.js'
 
 export default {
    props: {
       categorie: {type: Object, default: null}
    },
    data: function(){
-      return { Globals }
+      return { GlobalsFunc }
    }
 }
 </script>

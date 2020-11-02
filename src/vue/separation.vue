@@ -10,8 +10,8 @@
 
 <style lang="css" scoped>
    svg{
-      width: 25rem;
-      height: 20rem;
+      width: 15rem;
+      height: 10rem;
       fill: var(--main-color);
       align-self: center;
    }

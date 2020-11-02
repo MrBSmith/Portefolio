@@ -1,24 +1,24 @@
 <template>
-   <li v-if="Globals.Page == categorie.name" class="nav-item active">
-       <div class="nav-link disabled-link" :onclick="Globals.set_page(categorie.name)">{{ categorie.name }}
+   <li v-if="GlobalsFunc.get_current_page() == categorie.name" class="nav-item active">
+       <div class="nav-link disabled-link" :onclick="GlobalsFunc.set_page(categorie.name)">{{ categorie.name }}
           <span class="sr-only">(current)</span>
        </div>
     </li>
 
     <li v-else class="nav-item">
-        <div class="nav-link" v-on:click="Globals.set_page(categorie.name)">{{ categorie.name }}</div>
-     </li>
+        <a class="nav-link" :href="categorie.name.replaceAll(' ', '') + '.html'">{{ categorie.name }}</a>
+    </li>
 </template>
 
 <script>
-   import Globals from '../js/Globals.js'
+   import GlobalsFunc from '../js/GlobalsFunc.js'
 
    export default {
       props : {
          categorie : {type: Object, default: null}
       },
       data: function() {
-         return { Globals }
+         return { GlobalsFunc }
       }
    }
 </script>
