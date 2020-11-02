@@ -8,15 +8,28 @@
       <div class= "AboutMe">
          <div class="container">
             <h5 class="AboutMe-title">About Me</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Hello there, I'm Mr Baba - Also known as Baba des Bois.</p>
+            <p> I'm a french indie game developer & pixel artist.</p>
+            <br>
+            <p>
+               I'm working right now, mostly on two games of my own as a developer and/or as a pixel artist; both with a small team.
+               You can find more infos about the games in the <a class="link" href="#">Game Dev</a> section of this website.
+               I am also streaming a lot of my work, every afternoon during the week on my <a class="link" href="https://www.twitch.tv/babadesbois" target="_blank">twitch channel</a>.
+            </p>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>
+               I work mostly with <a class="link" href="https://godotengine.org/" target="_blank">Godot Engine</a> for the game dev part, and with <a class="link" href="https://www.aseprite.org/" target="_blank">Aseprite</a> for the pixeling.
+               I love music (and I write some sometimes), specialy nobody-listen-to kind of music. I love drinking coffee, board games, and learning new stuff on my own.
+            </p>
+            <br>
+            <p>
+               If you want some custom Pixel Art pieces, you can contact me <a class="link" href="mailto:hugobarette@gmail.com" target="_blank">here</a>.
+            </p>
+
+            <div class="d-flex justify-content-end">
+               <img class="BabaPortrait" src="../assets/PixelArt/MrBaba.png" alt="MrBaba">
+            </div>
+
          </div>
       </div>
       <separation></separation>
@@ -27,17 +40,27 @@
    import card from '../vue/card.vue'
    import categories from '../js/categorie.js'
    import separation from '../vue/separation.vue'
+   import link from '../vue/link.vue'
+   import Globals from '../js/Globals.js'
 
    export default {
       name: "indexPage",
-      components: { card, separation },
+      components: { card, separation, link },
       data: function(){
-        return { categories }
+        return { categories, Globals }
       }
    }
 </script>
 
 <style lang="css" scoped>
+
+   .link {
+      color: var(--text-soft-white);
+      transition: var(--main-transition);
+   }
+   .link:hover {
+      color: var(--focus-color);
+   }
    .AboutMe{
       padding-bottom: 2rem;
       margin-top: 2rem;
@@ -47,7 +70,15 @@
    }
    .AboutMe-title{
       margin: 2rem;
+      margin-top: 3rem;
       color: var(--text-main-color);
       font-size: 3rem;
+   }
+   .BabaPortrait{
+      display: flex;
+      justify : flex-end;
+      border-radius: 50%;
+      width: 128px;
+      height: 128px;
    }
 </style>

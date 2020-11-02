@@ -8,17 +8,17 @@
 </template>
 
 <script>
-import carousel from '../vue/carousel.vue'
-import gameDesc from '../vue/gameDesc.vue'
-import games from '../js/games.js'
+   import carousel from '../vue/carousel.vue'
+   import gameDesc from '../vue/gameDesc.vue'
+   import games from '../js/games.js'
 
-export default {
-   name : "gameDevPage",
-   components : { carousel , gameDesc },
-   data : function(){
-      return { games };
+   export default {
+      name : "gameDevPage",
+      components : { carousel , gameDesc },
+      data : function(){
+         return { games };
+      }
    }
-}
 </script>
 
 <style lang="css" scoped>

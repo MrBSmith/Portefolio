@@ -22,11 +22,11 @@ export default {
   props: {
     text: {
       type: String,
-      default: 'Haut de page',
+      default: 'Back to Top',
     },
     visibleoffset: {
       type: [String, Number],
-      default: 600,
+      default: 500,
     },
     visibleoffsetbottom: {
       type: [String, Number],

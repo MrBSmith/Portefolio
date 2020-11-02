@@ -3,6 +3,8 @@
       <h5 class="title">Pixel Art Galery</h5>
 
       <div class="d-flex flex-column" style = "padding: 1.5rem;">
+
+         <!-- First line -->
          <div class="d-flex align-self-center">
             <thumbnail src="../src/assets/PixelArt/Illustration/Galaxie.png" alt="..."></thumbnail>
             <div class="d-flex flex-column" style="margin: 1rem;">
@@ -19,6 +21,8 @@
                </div>
             </div>
          </div>
+
+         <!-- Second line -->
          <div class="d-flex justify-content-center">
             <div class="d-flex align-items-center">
                <div class="flex-column" style="margin: 1rem;">
@@ -32,7 +36,32 @@
                <thumbnail src="../src/assets/PixelArt/Illustration/LaTour.png" alt="..."></thumbnail>
             </div>
          </div>
+
+         <!-- Third line -->
+         <div class="flex-column" style="margin: 1rem;">
+            <div class="d-flex justify-content-center" style="margin: 1rem;">
+               <thumbnail src="../src/assets/PixelArt/Illustration/Stormx4.png"></thumbnail>
+               <thumbnail src="../src/assets/PixelArt/Illustration/Dunex4.png"></thumbnail>
+            </div>
+         </div>
+         <div class="flex-column" style="margin: 1rem;">
+            <thumbnail src="../src/assets/PixelArt/Illustration/Music.png"></thumbnail>
+         </div>
       </div>
+
+      <!-- fourth line -->
+      <div class="flex-column" style="margin-bottom: 4rem">
+         <div class="d-flex justify-content-center">
+            <thumbnail src="../src/assets/PixelArt/Illustration/Slippery.png"></thumbnail>
+            <div class="flex-column" style="margin: 1rem;">
+               <thumbnail src="../src/assets/PixelArt/Illustration/Coral.png"></thumbnail>
+               <thumbnail src="../src/assets/PixelArt/Illustration/Outpost.png"></thumbnail>
+            </div>
+         </div>
+      </div>
+
+      <!-- Screenshots -->
+      <!--
 
       <h5 class="title">Games Screenshots</h5>
       <div class="d-flex justify-content-center">
@@ -43,8 +72,8 @@
             <thumbnail src="../src/assets/PixelArt/Screenshots/RPGFantasy.png" alt="..."></thumbnail>
          </div>
       </div>
+   -->
    </div>
-
 </template>
 
 <script>
@@ -59,9 +88,4 @@
 </script>
 
 <style lang="css" scoped>
-   .title{
-      padding-top: 2rem;
-      text-align: center;
-      font-size: 3rem;
-   }
 </style>
