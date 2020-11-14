@@ -3,8 +3,8 @@
       <div class="game">
          <div class= "container">
             <h2 class="d-flex title game-title" :id="game.title + 'Title'">{{ game.title }}</h2>
-            <p class="d-flex game-desc"> {{game.description[0]}} </p>
-            <img v-for="screen in game.screenshots" class="game-thumbnail" :src="screen" alt="">
+            <p class="d-flex game-desc"> {{ game.description[0] }} </p>
+            <img v-for="screen in game.screenshots" class="game-thumbnail" :src="screen" :alt="game.name">
             <p v-for="(desc, index) in game.description" v-if="index != 0" class="d-flex game-desc"> {{desc}} </p>
             <iframe v-if="game.video != ''" width="560" height="315" :src="game.video"
              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
