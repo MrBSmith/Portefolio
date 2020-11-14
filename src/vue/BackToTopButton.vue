@@ -86,7 +86,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang= "css">
    a{
       text-decoration: none !important;
    }
@@ -108,12 +108,13 @@ export default {
 
    .vue-back-to-top .default {
    background-color: #e6a119;
-   border-radius: 3px;
+   border-radius: 7px;
    color: var(--dark-color);
-   height: 30px;
-   line-height: 30px;
+   height: 40px;
+   line-height: 40px;
    text-align: center;
-   width: 160px;
+   font-size: 1.4rem;
+   width: 190px;
    }
 
    .vue-back-to-top .default span{

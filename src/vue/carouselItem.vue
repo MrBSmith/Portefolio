@@ -19,8 +19,12 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
-   a{
+<style lang= "css">
+   .carousel-item{
+      transition-duration: 800ms;
+      transition-timing-function: ease;
+   }
+   .carousel-item-active{
       transition-duration: 800ms;
       transition-timing-function: ease;
    }

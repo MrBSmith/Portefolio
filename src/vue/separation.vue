@@ -8,10 +8,10 @@
    }
 </script>
 
-<style lang="css" scoped>
+<style lang= "css" scoped>
    svg{
-      width: 15rem;
-      height: 10rem;
+      width: 19rem;
+      height: 14rem;
       fill: var(--main-color);
       align-self: center;
    }

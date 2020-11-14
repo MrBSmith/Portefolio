@@ -2,7 +2,7 @@
    <main class="text-light">
       <navbar></navbar>
       <BackToTop text="Back to Top"></BackToTop>
-      <indexPage v-if="GlobalsFunc.get_current_page() == 'HugoBarette'"></indexPage>
+      <indexPage v-if="GlobalsFunc.get_current_page() == 'BabadesBois'"></indexPage>
       <pixelArtPage v-if="GlobalsFunc.get_current_page() == 'PixelArt'"></pixelArtPage>
       <gameDevPage v-if="GlobalsFunc.get_current_page() == 'GameDev'"></gameDevPage>
       <musicPage v-if="GlobalsFunc.get_current_page() == 'Music'"></musicPage>
@@ -34,7 +34,10 @@
    }
 </script>
 
-<style lang="scss">
+<style lang="css">
+   @import '../src/css/myColors.css';
+   @import '../src/css/page.css';
+
    html {
      position: relative;
      min-height: 100%;

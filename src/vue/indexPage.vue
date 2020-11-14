@@ -5,29 +5,29 @@
       </div>
       <separation></separation>
 
-      <div class= "AboutMe">
-         <div class="container">
-            <h5 class="AboutMe-title">About Me</h5>
-            <p>Hello there, I'm Mr Baba - Also known as Baba des Bois.</p>
+      <div class= "AboutMe" style="font-size: 1.3rem;">
+         <div class="container" >
+            <h1 class="AboutMe-title">About me</h1>
+            <p>Hello there, I'm Mr Baba - also known as Baba des Bois.</p>
             <p> I'm a french indie game developer & pixel artist.</p>
             <br>
             <p>
-               I'm working right now, mostly on two games of my own as a developer and/or as a pixel artist; both with a small team.
-               You can find more infos about the games in the <a class="link_to" href="#">Game Dev</a> section of this website.
-               I am also streaming a lot of my work, every afternoon during the week on my <a class="link_to" href="https://www.twitch.tv/babadesbois" target="_blank">twitch channel</a>.
+               I'm working right now on several games of my own as a developer and/or as a pixel artist.
+               You can find more infos about the games in the <a class="link_to" href="GameDev.html">Game Dev</a> section of this website.
+               I am streaming a lot of my work every afternoon -western Europe time (UTC+1)- during the week on my <a class="link_to" href="https://www.twitch.tv/babadesbois" target="_blank">twitch channel</a>.
             </p>
 
             <p>
                I work mostly with <a class="link_to" href="https://godotengine.org/" target="_blank">Godot Engine</a> for the game dev part, and with <a class="link_to" href="https://www.aseprite.org/" target="_blank">Aseprite</a> for the pixeling.
-               I love music (and I write some sometimes), specialy nobody-listen-to kind of music. I love drinking coffee, board games, and learning new stuff on my own.
+               I love music (and I write some from time to time), especially jazz and progressive rock. I love drinking coffee, board games, and learning new stuffs on my own.
             </p>
             <br>
             <p>
-               If you want some custom Pixel Art pieces, you can contact me <a class="link_to" href="mailto:hugobarette@gmail.com" target="_blank">here</a>.
+               If you want some custom pixel art pieces, you can contact me <a class="link_to" href="mailto:hugobarette@gmail.com" target="_blank">here</a> so we can talk about your needs and budget.
             </p>
 
             <div class="d-flex justify-content-end">
-               <img class="BabaPortrait" src="../assets/PixelArt/MrBaba.png" alt="MrBaba">
+               <img class="BabaPortrait" src="src/assets/PixelArt/MrBaba.png" alt="MrBaba">
             </div>
 
          </div>
@@ -51,8 +51,7 @@
    }
 </script>
 
-<style lang="css" scoped>
-
+<style lang= "css">
    .link_to {
       color: var(--text-soft-white);
       transition: var(--main-transition);
@@ -71,7 +70,7 @@
       margin: 2rem;
       margin-top: 3rem;
       color: var(--text-main-color);
-      font-size: 3rem;
+      font-size: 4rem;
    }
    .BabaPortrait{
       display: flex;

@@ -16,7 +16,7 @@
    }
 </script>
 
-<style lang="css" scoped>
+<style lang= "css">
    .img-thumbnail{
       margin: 0.3rem;
       background-color: var(--main-color);

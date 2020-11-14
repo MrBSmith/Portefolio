@@ -15,11 +15,11 @@
    }
 </script>
 
-<style lang="css" scoped>
+<style lang= "css">
    .socialIcon {
       margin: 0.2rem;
-      width: 3rem;
-      height: 3rem;
+      width: 4rem;
+      height: 4rem;
       border-radius: 50%;
       filter: saturate(0);
       filter: grayscale(100%);
@@ -29,8 +29,8 @@
       filter: saturate(3);
    }
    .socialIcon > img {
-      width: 30px;
-      height: 30px;
+      width: 2.5rem;
+      height: 2.5rem;
    }
    .socialIcon > #GitHub {
       filter: invert(100%);

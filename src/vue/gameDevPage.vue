@@ -1,5 +1,6 @@
 <template lang="html">
    <div class="page">
+      <h1 class="Title">Game Dev<h1>
       <carousel></carousel>
       <div class="desc-container">
          <gameDesc v-for="(game, id) in games" :game="game" :key="game.name" :isLast="id == games.length - 1"></gameDesc>
@@ -21,7 +22,7 @@
    }
 </script>
 
-<style lang="css" scoped>
+<style lang= "css">
    .desc-container{
       margin-top: 5rem;
       margin-bottom: 5rem;

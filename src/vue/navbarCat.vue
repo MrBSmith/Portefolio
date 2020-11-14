@@ -1,5 +1,5 @@
 <template>
-   <li v-if="GlobalsFunc.get_current_page() == categorie.name" class="nav-item active">
+   <li v-if="GlobalsFunc.get_current_page() == categorie.name.replaceAll(' ', '')" class="nav-item active">
        <div class="nav-link disabled-link" :onclick="GlobalsFunc.set_page(categorie.name)">{{ categorie.name }}
           <span class="sr-only">(current)</span>
        </div>
@@ -23,8 +23,9 @@
    }
 </script>
 
-<style>
+<style lang= "css">
    .nav-link {
+      font-size: 1.3rem;
       border: none;
       background-color: inherit;
       color: var(--text-main-color);
@@ -34,15 +35,14 @@
    }
 
    .disabled-link {
-      opacity: 50%;
+      opacity: 0.6;
    }
-
    .nav-link:hover {
       color: var(--focus-color);
    }
-
    .disabled-link:hover {
-      opacity: 50%;
+      opacity: 0.6;
       color: var(--text-main-color);
    }
+
 </style>

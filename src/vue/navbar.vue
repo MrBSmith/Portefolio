@@ -27,15 +27,14 @@
    }
 </script>
 
-<style lang="css">
+<style lang= "css">
    .navbar-brand {
       border: none;
       background-color: inherit;
       font-weight: bold;
-      font-size: 1.6rem;
+      font-size: 2.2rem;
       color: var(--text-main-color);
       transition: var(--main-transition);
-      opacity: 100%;
    }
    .navbar-brand:hover {
       color: var(--focus-color);

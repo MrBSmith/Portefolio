@@ -1,6 +1,6 @@
 <template lang="html">
    <div class="page">
-      <h5 class="title">Game Musics</h5>
+      <h1 class="title">Game Musics</h1>
       <div class="bloc">
          <p class="desc">Some of the game music I composed over the years.</p>
          <br style="margin: 0.5rem;">
@@ -12,10 +12,10 @@
          <iframe width="70%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/110812631&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
       </div>
       <separation></separation>
-      <h5 class="title">Draw the Sky</h5>
+      <h2 class="title">Draw the Sky</h2>
       <div class="bloc" style="margin-bottom: 5rem;">
          <p class="desc">Draw the Sky is a progressive rock & jazz rock band I used to play for as a guitarist.</p>
-         <p class="desc">I also composed some of the songs and produced the album.</p>
+         <p class="desc">I composed some of the songs and produced the album.</p>
          <br style="margin: 0.5rem;">
          <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=album&id=15366525&app_id=1" width="700" height="350"></iframe>
       </div>
@@ -30,7 +30,7 @@
    }
 </script>
 
-<style>
+<style lang= "css">
    .bloc {
       display: flex;
       padding: 3rem;
@@ -50,5 +50,6 @@
    }
    .desc{
       color: var(--dark-color);
+      font-size: 1.3rem;
    }
 </style>

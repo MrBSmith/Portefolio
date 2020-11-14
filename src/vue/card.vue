@@ -23,9 +23,9 @@ export default {
 }
 </script>
 
-<style media="screen">
+<style lang= "css">
    .card {
-      width: 22rem;
+      width: 30rem;
       margin : 1rem;
       background-color: var(--main-color);
       color: var(--text-main-color);
@@ -43,11 +43,16 @@ export default {
       color: inherit;
    }
    .card-link > img{
-      height: 14rem;
+      height: 20rem;
       object-fit: cover;
    }
    .card-title {
       font-weight: bold;
+      font-size: 1.8rem;
+   }
+   .card-text{
+      font-weight: lighter;
+      font-size: 1.2rem;
    }
 
 </style>

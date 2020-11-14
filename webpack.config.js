@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/main.js',
@@ -68,7 +69,7 @@ module.exports = {
         }
       }
     ]
-  },
+},
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
@@ -93,12 +94,6 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false
       }
     }),
     new webpack.LoaderOptionsPlugin({

@@ -39,7 +39,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang= "css">
    .carousel{
       padding: 0.5%;
       max-width: 65%;
